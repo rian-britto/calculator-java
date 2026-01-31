@@ -7,11 +7,14 @@ import operators.Divisao;
 public class App {
     public static void main(String[] args) {
 
-        double n1 = 8;
-        double n2 = 2;
         double resultado;
 
         Scanner sc = new Scanner(System.in);
+        System.out.println("Insira um numero: ");
+        double n1 = sc.nextDouble();
+        System.out.println("Insira outro numero: ");
+
+        double n2 = sc.nextDouble();
 
         System.out.println("Insira um operador (+, -, x, /): ");
         String operador = sc.next();
