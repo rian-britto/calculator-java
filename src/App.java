@@ -2,11 +2,12 @@ import java.util.Scanner;
 import operators.Subtrair;
 import operators.Multiplicacao;
 import operators.Adicao;
+import operators.Divisao;
 
 public class App {
     public static void main(String[] args) {
 
-        double n1 = 2;
+        double n1 = 8;
         double n2 = 2;
         double resultado;
 
@@ -24,6 +25,9 @@ public class App {
             System.out.println(resultado);
         } else if (operador.equals("+")) {
             resultado = Adicao.somar(n1, n2);
+            System.out.println(resultado);
+        } else if (operador.equals("/")) {
+            resultado = Divisao.dividir(n1, n2);
             System.out.println(resultado);
         }
 
