@@ -1,2 +1,2 @@
 # calculator-java
-imple calculator in Java using Scanner and OOP
+simple calculator in Java using Scanner and OOP
