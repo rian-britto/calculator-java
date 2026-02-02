@@ -12,12 +12,12 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.println("Insira um numero: ");
         double n1 = sc.nextDouble();
-        System.out.println("Insira outro numero: ");
-
-        double n2 = sc.nextDouble();
 
         System.out.println("Insira um operador (+, -, x, /): ");
         String operador = sc.next();
+
+        System.out.println("Insira outro numero: ");
+        double n2 = sc.nextDouble();
 
         if (operador.equals("-")) {
             resultado = Subtrair.subtrair(n1, n2);
