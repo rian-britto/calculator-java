@@ -17,14 +17,12 @@ public class App {
                 System.out.println("4 - Dividir");
                 System.out.println("0 - Sair");
 
-                int option = Integer.parseInt(sc.nextLine());
+                System.out.print("Escolha uma opção: ");
+                int option = readOption(sc);
 
-                if (option == 0)
+                if (option == 0) {
+                    System.out.println("Encerrando...");
                     break;
-
-                if (option < 1 || option > 4) {
-                    System.out.println("Opção inválida");
-                    continue;
                 }
 
                 System.out.println("Insira um numero: ");
@@ -52,6 +50,21 @@ public class App {
         }
 
         sc.close();
+    }
+
+    private static int readOption(Scanner sc) {
+        while (true) {
+            String input = sc.nextLine().trim();
+            try {
+                int option = Integer.parseInt(input);
+                if (option >= 0 && option <= 4) {
+                    return option;
+                }
+            } catch (NumberFormatException ignored) {
+            }
+
+            System.out.println("Opção inválida. Digite um número entre 0 e 4:");
+        }
     }
 
     private static double readDouble(Scanner sc) {
